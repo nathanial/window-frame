@@ -34,12 +34,12 @@ app.on('ready', () => {
   mainWindow.hookWindowMessage(WM_NCCALCSIZE, function(w_param, l_param_pointer) {
     console.log("Calc Size", w_param, l_param_pointer);
   });
-  console.log("Hooked", mainWindow.isWindowMessageHooked(WM_DEVICECHANGE));
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
   mainWindow.openDevTools();
   mainWindow.on('closed', function() {
     mainWindow = null;
   });
 });
+
 
 // @endif

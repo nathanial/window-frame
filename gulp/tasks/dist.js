@@ -4,6 +4,7 @@ var less = require('gulp-less');
 var sourcemaps = require('gulp-sourcemaps');
 var merge = require('merge-stream');
 var preprocess = require('gulp-preprocess');
+var lessGlob = require('less-plugin-glob');
 
 gulp.task('dist', function(){
   var babelConfig = {
@@ -26,6 +27,7 @@ gulp.task('dist', function(){
     gulp.src('src/images/**/*', {base: 'src'})
         .pipe(gulp.dest('build')),
     gulp.src('src/**/*.less').pipe(less({
+      plugins: [lessGlob],
       paths: [
        './src'
      ]

@@ -20,7 +20,7 @@
   "homepage": "https://github.com/nathanial/window-frame#readme",
   "devDependencies": {
     "electron-connect": "^0.3.3",
-    "electron-prebuilt": "0.34.2",
+    "electron-prebuilt": "0.36.0",
     "gulp": "3.9.0",
     "gulp-babel": "5.2.0",
     "gulp-electron": "0.0.9",
@@ -37,6 +37,7 @@
   "dependencies": {
     "babel-runtime": "5.8.20",
     "jquery": "^2.1.4",
+    "less-plugin-glob": "^1.1.1",
     "mousetrap": "1.5.3",
     "react": "0.14.2",
     "react-dom": "0.14.2",
