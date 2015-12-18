@@ -23,8 +23,8 @@ export default class TopControls extends Component {
            onDoubleClick={this._onTitleBarDoubleClick}>
         <div className="upper-section">
           <div className="title-bar">
-            <img className="app-icon" src="images/document_empty.png"></img>
-            <span className="title">Paint.NET UI Clone</span>
+            <img className="app-icon" src="images/application.png"></img>
+            <span className="title">Application</span>
           </div>
           <WindowControls ref="windowControls"
                           onMinimize={this._onMinimize}

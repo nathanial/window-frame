@@ -1,11 +1,22 @@
+@import "../theme.less";
+
 .top-controls {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   .upper-section {
     .title-bar {
       margin: 5px 5px 0px 5px;
       cursor: default;
       .title {
+        position: relative;
+        top: 0;
         font-size: 12px;
         margin-left: 10px;
+        font-family: Helvetica, Arial, Sans-Serif;
+        color: @title-font-color;
       }
       .app-icon {
         position: relative;
@@ -15,7 +26,6 @@
     .menu-bar {
       margin: 5px 5px -1px 5px;
     }
-    border-bottom: 1px solid #ccc;
 
     .window-controls {
       position: absolute;
@@ -26,7 +36,7 @@
       .minimize,.maximize,.exit {
         display: inline-block;
         font-family: "Segoe UI";
-        color: #777;
+        color: white;
         font-size: 22px;
         padding: 5px 15px;
         cursor: default;
@@ -50,7 +60,7 @@
         .square {
           position: relative;
           top: 4px;
-          border: 1px solid #777;
+          border: 1px solid white;
           width: 10px;
           height: 10px;
         }
