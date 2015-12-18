@@ -6,6 +6,7 @@ var babel = require('gulp-babel');
 var less = require('gulp-less');
 var lessGlob = require('less-plugin-glob');
 var sourcemaps = require('gulp-sourcemaps');
+var preprocess = require('gulp-preprocess');
 var packageJson = require('../../package.json');
 var babelConfig = {
   stage: 0,
@@ -36,6 +37,7 @@ gulp.task('copy-modules', function(){
 gulp.task('babelify-files', function(){
   var sourcemapWrite = {};
   return gulp.src(['src/**/*.js', 'src/**/*.jsx', '!src/vendor/**/*.js'])
+             .pipe(preprocess({context: { NODE_ENV: 'development', DEBUG: true}}))
              .pipe(babel(babelConfig))
              .pipe(gulp.dest('build'));
 });
