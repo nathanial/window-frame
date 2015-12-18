@@ -12,6 +12,10 @@ const app = remote.require('app');
 
 export default class TopControls extends Component {
 
+  static propTypes = {
+    title: React.PropTypes.string.isRequired
+  }
+
   constructor(){
     super(...arguments);
     this.win = BrowserWindow.getAllWindows()[0];
@@ -23,7 +27,7 @@ export default class TopControls extends Component {
         <div className="upper-section">
           <div className="title-bar">
             <img className="app-icon" src="images/application.png"></img>
-            <span className="title">Application</span>
+            <span className="title">{this.props.title}</span>
           </div>
           <WindowControls ref="windowControls"
                           onMinimize={this._onMinimize}

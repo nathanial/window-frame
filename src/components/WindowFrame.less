@@ -6,5 +6,13 @@
   top: 0;
   right: 0;
   bottom: 0;
-  border: 1px solid @window-border;
+  font-family: Helvetica, Arial, Sans-Serif;
+  &.dark {
+    border: 1px solid @dark-window-border;
+    background: @dark-window-background;
+  }
+  &.light {
+    border: 1px solid @light-window-border;
+    background: @light-window-background;
+  }
 }

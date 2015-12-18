@@ -1,5 +1,56 @@
 @import "../theme.less";
 
+.window-frame.dark {
+  .top-controls {
+    .upper-section {
+      .title-bar {
+        .title {
+          color: @dark-title-font-color;
+        }
+      }
+
+      .minimize,.maximize {
+        &:hover {
+          background: #555;
+        }
+      }
+
+      .minimize,.maximize,.exit {
+        color: white;
+        .square {
+          border: 1px solid white;
+        }
+      }
+    }
+  }
+}
+
+.window-frame.light {
+  .top-controls {
+    .upper-section {
+      .title-bar {
+        .title {
+          color: @light-title-font-color;
+        }
+      }
+
+      .minimize,.maximize {
+        &:hover {
+          background: white;
+        }
+      }
+
+      .minimize,.maximize,.exit {
+        color: black;
+        .square {
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+}
+
+
 .top-controls {
   -webkit-user-select: none;
   -webkit-app-region: drag;
@@ -13,7 +64,6 @@
         font-size: 12px;
         margin-left: 10px;
         font-family: Helvetica, Arial, Sans-Serif;
-        color: @title-font-color;
       }
       .app-icon {
         position: relative;
