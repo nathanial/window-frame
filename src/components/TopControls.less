@@ -52,6 +52,10 @@
 
 
 .top-controls {
+  box-sizing: content-box;
+  * {
+    box-sizing: content-box;
+  }
   -webkit-user-select: none;
   -webkit-app-region: drag;
   .upper-section {
@@ -68,6 +72,7 @@
       .app-icon {
         position: relative;
         top: 3px;
+        vertical-align: top;
       }
     }
     .menu-bar {

@@ -13,7 +13,12 @@ const app = remote.require('app');
 export default class TopControls extends Component {
 
   static propTypes = {
-    title: React.PropTypes.string.isRequired
+    title: React.PropTypes.string.isRequired,
+    icon: React.PropTypes.string
+  }
+
+  static defaultProps = {
+    icon: __dirname + '/../images/application.png'
   }
 
   constructor(){
@@ -26,7 +31,7 @@ export default class TopControls extends Component {
       <div className="top-controls">
         <div className="upper-section">
           <div className="title-bar">
-            <img className="app-icon" src="images/application.png"></img>
+            <img className="app-icon" src={this.props.icon}></img>
             <span className="title">{this.props.title}</span>
           </div>
           <WindowControls ref="windowControls"
