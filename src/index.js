@@ -1,5 +1,10 @@
 // @if NODE_ENV='production'
-module.exports = {};
+
+import WindowFrame from './components/WindowFrame';
+
+module.exports = {
+  WindowFrame
+};
 // @endif
 
 
