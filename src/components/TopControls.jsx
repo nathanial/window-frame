@@ -9,6 +9,7 @@ import remote from 'remote';
 const BrowserWindow = remote.require('browser-window');
 const app = remote.require('app');
 
+
 export default class TopControls extends Component {
 
   constructor(){
